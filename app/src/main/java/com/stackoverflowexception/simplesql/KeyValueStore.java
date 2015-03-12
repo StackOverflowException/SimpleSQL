@@ -17,7 +17,6 @@ public class KeyValueStore extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "keyValueDatabase";
     private static final String TABLE_NAME = "keyValueTable";
 
-    private static final String KEY_ID = "id";
     private static final String KEY_KEY = "key";
     private static final String KEY_VALUE = "value";
 
@@ -29,7 +28,7 @@ public class KeyValueStore extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_KEYVALUE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
-                + KEY_ID + " INTEGER PRIMARY KEY," + KEY_KEY + " TEXT,"
+                + KEY_KEY + " TEXT,"
                 + KEY_VALUE + " TEXT" + ")";
         db.execSQL(CREATE_KEYVALUE_TABLE);
     }
